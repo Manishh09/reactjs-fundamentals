@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import Hello from './jsx/Hello';
+import Welcome from './without-jsx/Welcome';
 
+// Its a Functional Component Written in JSX
 function App() {
   return (
     <div className="App">
@@ -18,6 +21,11 @@ function App() {
           Learn React
         </a>
       </header>
+
+      {/* Hello Component */}
+      <Hello />
+      {/* Welcome Component */}
+      <Welcome />
     </div>
   );
 }
