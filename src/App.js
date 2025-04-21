@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Message from './state-in-class-component/Message';
 
 function App() {
   return (
@@ -18,6 +19,12 @@ function App() {
           Learn React
         </a>
       </header>
+
+      {/* Message Component */}
+      {/* Cannot work with Props as the data cannot be changed once set via Props. */}
+      {/* Solution here would be the State */}
+      
+      <Message></Message>
     </div>
   );
 }
