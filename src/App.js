@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import Counter from './setState/Counter';
+import CounterWithPrevState from './setState/CounterWithPrevState';
 
 function App() {
   return (
@@ -18,6 +20,15 @@ function App() {
           Learn React
         </a>
       </header>
+
+      {/* Counter Component */}
+      <Counter />
+
+      <hr />
+      
+      {/* Counter with PrevState */}
+      <CounterWithPrevState />
+ 
     </div>
   );
 }
