@@ -20,3 +20,4 @@
 
 - Both Props and State hold the information that impact the User Interface in the Browser.
 - State - an object that is privately maintained inside a component
+- State - can be changed within the component
