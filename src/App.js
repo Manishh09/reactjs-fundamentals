@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import Greet from './destructing-props-state/Greet';
+import Hello from './destructing-props-state/Hello';
 
 function App() {
   return (
@@ -18,6 +20,13 @@ function App() {
           Learn React
         </a>
       </header>
+
+      {/* Greet Component */}
+      <Greet name="Bruce" heroName="Batman"/>
+
+      {/* Hello Component */}
+
+      <Hello name="Chris" heroName="Thor"/>
     </div>
   );
 }
