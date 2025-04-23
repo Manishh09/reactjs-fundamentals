@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import Click from './event-handling/functional-components/Click';
+import Action from './event-handling/class-component/Action';
+import EventBind from './event-handling/EventBind';
 
 function App() {
   return (
@@ -18,6 +21,20 @@ function App() {
           Learn React
         </a>
       </header>
+
+      {/* Event Handling */}
+
+      {/* Functional Components */}
+      <Click /> 
+
+      {/* Class Components */}
+      <Action /> 
+
+      {/* Event Binding */}
+      <EventBind />  
+
+       
+
     </div>
   );
 }
