@@ -2,7 +2,7 @@ import React from 'react'
 
 function  Click() {
   const clickHandler = () => {
-    alert('Button clicked!')
+    alert('Button clicked in Functional Component')
   }
   return (
     <div>
