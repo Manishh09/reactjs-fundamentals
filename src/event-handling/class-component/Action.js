@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class Action extends Component {
     clickHandler() {
-        console.log("Clicked")
+        alert("Clicked in Class Component")
     }
   render() {
     return (
