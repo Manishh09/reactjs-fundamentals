@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import UserList from "./method-as-props/UserList";
+import Parent from "./demo/Parent";
 
 function App() {
   return (
@@ -32,7 +33,8 @@ function App() {
         </p>
       </div>
 
-      <UserList />
+      {/* <UserList /> */}
+      <Parent />
     </div>
   );
 }
