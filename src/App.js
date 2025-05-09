@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import UserList from './list-rendering-demo2/UserList';
+import ListRenderingDemo from './list-rendering/ListRenderingDemo';
 
 function App() {
   return (
@@ -18,6 +20,11 @@ function App() {
           Learn React
         </a>
       </header>
+
+      {/* List Rendering Demo */}
+      <ListRenderingDemo />
+      {/* List Rendering Demo using Nested Component */}
+      <UserList />
     </div>
   );
 }
