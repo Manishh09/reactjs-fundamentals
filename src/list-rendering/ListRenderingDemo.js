@@ -17,11 +17,11 @@ import React, { Component } from "react";
 export class ListRenderingDemo extends Component {
   render() {
     const items = ["Item 1", "Item 2", "Item 3"];
-    const listItems = items.map((item) => <li>{item}</li>);
+    const listItems = items.map((item) => <li >{item}</li>);
 
     return (
       <div>
-        <h2>List Rendering Demo</h2>
+        <h2>List Rendering Demo Without Key Prop</h2>
         <p>
           This is a simple example of how to render a list of items in React
           using the map function.

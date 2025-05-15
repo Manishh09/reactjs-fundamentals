@@ -50,11 +50,11 @@ export class UserList extends Component {
     // using map to render a list of items in React
     // use separate component for each item
 
-    const userListItems = userList.map((user) => <User user={user} />);
+    const userListItems = userList.map((user) => <User  user={user} />);
 
     return (
       <div>
-        <h2>List Rendering Demo using Nested Component</h2>
+        <h2>List Rendering Demo using Nested Component Without Key Prop</h2>
 
         {userListItems}
       </div>
