@@ -1,0 +1,20 @@
+.external-style {
+     background-color: azure;
+     color: rgb(235, 117, 117);
+}
+
+.primary{
+     color: cornflowerblue;
+ }
+ 
+ .secondary{
+     color: rgb(255, 0, 0);
+ }
+ 
+ .class1{
+     color: rgb(0, 255, 0);
+ }
+ 
+ .class2{
+     color: rgb(0, 0, 255);
+ }
