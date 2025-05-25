@@ -8,7 +8,7 @@ export class Form extends Component {
       name: "",
       email: "",
       comments: "",
-      radio: "",
+      radio: false,
       checkbox: false,
       select: "",
     };
@@ -62,6 +62,13 @@ export class Form extends Component {
     console.log("Form submitted with the following data:");
     console.log('form-values:',this.state);
   };
+  
+  // handle change Generic Function
+  handleChange = (event) => {
+      this.setState({
+        [event.target.name]: event.target.value
+      })
+  }
 
   render() {
     const { name, email, comments, radio, checkbox, select } = this.state;
@@ -76,7 +83,7 @@ export class Form extends Component {
             id="name"
             name="name"
             value={name}
-            onChange={this.handleNameChange} // Controlled Component
+            onChange={this.handleChange} // Controlled Component
           />
         </div>
 
@@ -88,7 +95,7 @@ export class Form extends Component {
             id="email"
             name="email"
             value={email}
-            onChange={this.handleEmailChange} // Controlled Component
+            onChange={this.handleChange} // Controlled Component
           />
         </div>
 
@@ -99,7 +106,7 @@ export class Form extends Component {
             id="comments"
             name="comments"
             value={comments}
-            onChange={this.handleCommentsChange} // Controlled Component
+            onChange={this.handleChange} // Controlled Component
           />
         </div>
 
@@ -110,8 +117,8 @@ export class Form extends Component {
             type="radio"
             id="option1"
             name="radio"
-            value={radio}
-            onChange={this.handleRadioChange} // Controlled Component
+            value={!radio}
+            onChange={this.handleChange} // Controlled Component
           />
         </div>
 
@@ -122,8 +129,8 @@ export class Form extends Component {
             type="checkbox"
             id="checkbox"
             name="checkbox"
-            value={checkbox}
-            onChange={this.handleCheckboxChange} // Controlled Component
+            value={!checkbox}
+            onChange={this.handleChange} // Controlled Component
           />
         </div>
 
@@ -134,7 +141,7 @@ export class Form extends Component {
             id="select"
             name="select"
             value={select}
-            onChange={this.handleSelectChange} // Controlled Component
+            onChange={this.handleChange} // Controlled Component
           >
             <option value="default" disabled>
               Select an option
