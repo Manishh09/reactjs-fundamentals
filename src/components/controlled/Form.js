@@ -1,17 +1,18 @@
 import React, { Component } from "react";
 
 export class Form extends Component {
+  initialState = {
+    name: "",
+    email: "",
+    comments: "",
+    radio: false,
+    checkbox: false,
+    select: "",
+  };
   constructor(props) {
     super(props);
 
-    this.state = {
-      name: "",
-      email: "",
-      comments: "",
-      radio: false,
-      checkbox: false,
-      select: "",
-    };
+    this.state = this.initialState;
   }
 
   // handles the change event for the name input field
@@ -60,15 +61,20 @@ export class Form extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     console.log("Form submitted with the following data:");
-    console.log('form-values:',this.state);
+    console.log("form-values:", this.state);
   };
-  
+
   // handle change Generic Function
   handleChange = (event) => {
-      this.setState({
-        [event.target.name]: event.target.value
-      })
-  }
+    this.setState({
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  // function to handle Reset form
+  handleReset = () => {
+    this.setState(this.initialState);
+  };
 
   render() {
     const { name, email, comments, radio, checkbox, select } = this.state;
@@ -156,7 +162,9 @@ export class Form extends Component {
         </div>
         {/* Reset Button */}
         <div>
-          <button type="reset">Reset</button>
+          <button type="reset" onClick={this.handleReset}>
+            Reset
+          </button>
         </div>
       </form>
     );
