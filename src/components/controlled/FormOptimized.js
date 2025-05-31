@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export class Form extends Component {
+export class FormOptimized extends Component {
   initialState = {
     name: "",
     email: "",
@@ -15,47 +15,7 @@ export class Form extends Component {
     this.state = this.initialState;
   }
 
-  // handles the change event for the name input field
-  handleNameChange = (event) => {
-    this.setState({
-      name: event.target.value,
-    });
-  };
-
-  // handles the change event for the email input field
-  handleEmailChange = (event) => {
-    this.setState({
-      email: event.target.value,
-    });
-  };
-
-  // handles the change event for the radio button
-  handleRadioChange = (event) => {
-    this.setState({
-      radio: event.target.checked,
-    });
-  };
-
-  // handles the change event for the comments textarea
-  handleCommentsChange = (event) => {
-    this.setState({
-      comments: event.target.value,
-    });
-  };
-
-  // handles the change event for the checkbox input field
-  handleCheckboxChange = (event) => {
-    this.setState({
-      checkbox: event.target.checked,
-    });
-  };
-
-  // handles the change event for the select input field
-  handleSelectChange = (event) => {
-    this.setState({
-      select: event.target.value,
-    });
-  };
+  
 
   // handles the submit event for the form
   handleSubmit = (event) => {
@@ -101,7 +61,7 @@ export class Form extends Component {
             id="email"
             name="email"
             value={email}
-            onChange={this.handleEmailChange} // Controlled Component
+            onChange={this.handleChange} // Controlled Component
           />
         </div>
 
@@ -112,7 +72,7 @@ export class Form extends Component {
             id="comments"
             name="comments"
             value={comments}
-            onChange={this.handleCommentsChange} // Controlled Component
+            onChange={this.handleChange} // Controlled Component
           />
         </div>
 
@@ -124,7 +84,7 @@ export class Form extends Component {
             id="option1"
             name="radio"
             value={!radio}
-            onChange={this.handleRadioChange} // Controlled Component
+            onChange={this.handleChange} // Controlled Component
           />
         </div>
 
@@ -136,7 +96,7 @@ export class Form extends Component {
             id="checkbox"
             name="checkbox"
             value={!checkbox}
-            onChange={this.handleCheckboxChange} // Controlled Component
+            onChange={this.handleChange} // Controlled Component
           />
         </div>
 
@@ -147,7 +107,7 @@ export class Form extends Component {
             id="select"
             name="select"
             value={select}
-            onChange={this.handleSelectChange} // Controlled Component
+            onChange={this.handleChange} // Controlled Component
           >
             <option value="default" disabled>
               Select an option
@@ -171,4 +131,4 @@ export class Form extends Component {
   }
 }
 
-export default Form;
+export default FormOptimized;
